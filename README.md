@@ -1,0 +1,2 @@
+# Manavzai
+Ai for people
