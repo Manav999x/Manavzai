@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Manavai | Premium AI Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              gray: {
+                750: '#2d3748',
+                850: '#1a202c',
+                950: '#0d1117',
+              }
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    
+    <!-- Markdown Parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0f172a; /* Slate 900 */
+        color: #e2e8f0; /* Slate 200 */
+      }
+      
+      pre {
+        font-family: 'JetBrains Mono', monospace;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569;
+      }
+
+      /* Markdown Styles */
+      .markdown-body h1 { font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem; margin-top: 1.5rem; color: #f8fafc; }
+      .markdown-body h2 { font-size: 1.4rem; font-weight: 600; margin-bottom: 0.75rem; margin-top: 1.25rem; color: #f1f5f9; }
+      .markdown-body h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; margin-top: 1rem; color: #e2e8f0; }
+      .markdown-body p { margin-bottom: 1rem; line-height: 1.7; }
+      .markdown-body ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+      .markdown-body ol { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1rem; }
+      .markdown-body code { background-color: #334155; color: #e2e8f0; padding: 0.2rem 0.4rem; rounded: 0.25rem; font-size: 0.875em; border-radius: 0.25rem; }
+      .markdown-body pre { background-color: #1e293b; padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1rem; }
+      .markdown-body pre code { background-color: transparent; padding: 0; color: inherit; }
+      .markdown-body blockquote { border-left: 4px solid #f59e0b; padding-left: 1rem; color: #94a3b8; font-style: italic; margin-bottom: 1rem; }
+      .markdown-body table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+      .markdown-body th, .markdown-body td { border: 1px solid #334155; padding: 0.5rem; text-align: left; }
+      .markdown-body th { background-color: #1e293b; }
+      .markdown-body a { color: #fbbf24; text-decoration: underline; }
+
+      .typing-cursor::after {
+        content: '▋';
+        animation: blink 1s step-start infinite;
+        color: #f59e0b;
+        margin-left: 2px;
+      }
+      @keyframes blink { 50% { opacity: 0; } }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "firebase/app": "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js",
+    "firebase/auth": "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js",
+    "firebase/database": "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.6.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

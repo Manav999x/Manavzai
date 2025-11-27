@@ -1,0 +1,7 @@
+{
+  "name": "Manavai",
+  "description": "A warm, helpful, expert-grade multimodal AI assistant supporting text, image, and code interactions.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
